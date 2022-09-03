@@ -1,0 +1,71 @@
+.first-screen {
+    padding-top: 170px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -15%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../images/content/cars/brz.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -2;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(20, 20, 20, 0.8) 78.8%, #141414 100%);
+        z-index: -2;
+    }
+    &__info {
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__text {
+        margin: 40px auto;
+        font-size: 40px;
+        line-height: 48px;
+        max-width: 460px;
+    }
+    &__link {
+        @extend %link--accent;
+    }
+}
+
+.information {
+    margin-top: 100px;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 35%;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 50px 0;
+    }
+    &__item + &__item {
+        border-left: 1px solid $border-color;
+    }
+    &__item-text {
+        max-width: 270px;
+        margin: 0 auto;
+        p {
+            line-height: 34px;
+            @extend %reforma-600;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: $accent-color;
+        }
+    }
+}
