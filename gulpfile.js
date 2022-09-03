@@ -10,10 +10,11 @@ const uglify         = require('gulp-uglify');
 const rename         = require('gulp-rename');
 const imagemin       = require('gulp-imagemin');
 const htmlmin        = require('gulp-htmlmin');
+const critical       = require('critical');
+const nunjucksRender = require('gulp-nunjucks-render');
 const del            = require('del');
 const { notify }     = require('browser-sync');
 const browserSync    = require('browser-sync').create();
-const critical       = require('critical');
 
 // function html() {
 //   return src('app/**/*.html')
@@ -53,6 +54,13 @@ function browsersync() {
   })
 }
 
+function nunjucks() {
+  return src('app/*.njk')
+    .pipe(nunjucksRender())
+    .pipe(dest('app'))
+    .pipe(browserSync.stream())
+}
+
 function styles() {
   return src('app/scss/*.scss')
     .pipe(scss({outputStyle: 'compressed'}))
@@ -70,6 +78,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'app/js/slider.js',
     'app/js/main.js',
   ])
   .pipe(concat('main.min.js'))
@@ -94,7 +103,7 @@ function cleanDist() {
 
 function watching() {
   watch(['app/**/*.scss'], styles);
-  // watch(['app/*.njk'], nunjucks);
+  watch(['app/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -108,8 +117,9 @@ exports.watching = watching;
 // exports.critGenerate = critGenerate;
 // exports.img = img;
 // exports.html = html;
+exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
 exports.dist = series(cleanDist, dist);
 
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(nunjucks, styles, scripts, browsersync, watching);

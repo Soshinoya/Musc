@@ -1,0 +1,58 @@
+.achievements {
+    padding: 180px 0;
+    &__inner {
+        gap: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .title {
+        text-align: left;
+        max-width: 640px;
+    }
+    .squares {
+        margin: 40px 0 60px;
+        justify-content: flex-start;
+    }
+    &__text {
+        max-width: 530px;
+    }
+    &__items-inner {
+        display: flex;
+    }
+    &__items-list {
+        &:last-child {
+            margin-top: 40px;
+        }
+    }
+    &__item {
+        text-align: center;
+        width: 310px;
+        border: 1px solid $border-color;
+        padding: 30px 15px;
+        min-height: 195px;
+    }
+    &__item-title {
+        max-width: 640px;
+        width: 100%;
+        font-size: 52px;
+        line-height: 73px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        @extend %reforma-600;
+        text-transform: uppercase;
+        color: $accent-color;
+        span {
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+    &__item-text {
+        max-width: 280px;
+        @extend %reforma-600;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

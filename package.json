@@ -25,6 +25,7 @@
     "sass": "^1.43.4"
   },
   "dependencies": {
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "nunjucks": "^3.2.3"
   }
 }
