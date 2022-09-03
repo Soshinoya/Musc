@@ -1,0 +1,50 @@
+$accent-color: #db3138;
+$white-color: #fff;
+$border-color: #898989;
+$black-color: #141414;
+
+%reforma-700 {
+    font-family: "ReformaGroteskBoldC";
+    font-weight: 700;
+}
+
+%reforma-600 {
+    font-family: "ReformaGroteskDemiC";
+    font-weight: 600;
+}
+
+%reforma-500 {
+    font-family: "ReformaGroteskMediumC";
+    font-weight: 500;
+}
+
+%link--accent {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 15px 25px;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @extend %reforma-600;
+    color: $white-color;
+    position: relative;
+    max-width: 200px;
+    &::before {
+        content: "";
+        position: absolute;
+        max-width: -webkit-fill-available;
+        max-height: -webkit-fill-available;
+        width: 60%;
+        height: 100%;
+        background-color: $accent-color;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.5s ease;
+    }
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}

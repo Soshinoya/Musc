@@ -1,0 +1,74 @@
+html,
+body {
+    height: 100%;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+body {
+    font-size: 24px;
+    line-height: 30px;
+    @extend %reforma-500;
+    letter-spacing: 0.03em;
+    color: $white-color;
+    display: flex;
+    flex-direction: column;
+    background-color: $black-color;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+h1 {
+    font-size: 150px;
+    line-height: 190px;
+    @extend %reforma-700;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: $accent-color;
+}
+
+.title {
+    @extend %reforma-600;
+    font-size: 52px;
+    line-height: 72px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    @extend %reforma-600;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @extend %reforma-600;
+}
+
+.squares {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    div {
+        width: 10px;
+        height: 10px;
+        background-color: $accent-color;
+        transform: rotate(-45deg);
+    }
+}
