@@ -1,0 +1,59 @@
+.service {
+    padding-top: 180px;
+    .squares {
+        margin: 40px 0 60px;
+    }
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+.service-card {
+    max-width: 310px;
+    height: 430px;
+    width: 100%;
+    padding: 0 40px 50px;
+    border: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    &__img {
+        margin-top: auto;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        line-height: 34px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: uppercase;
+        @extend %reforma-600;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: uppercase;
+        @extend %reforma-600;
+        margin-bottom: 25px;
+        max-width: 230px;
+    }
+    &__link {
+        font-size: 18px;
+        line-height: 25px;
+        @extend %link--accent;
+        &::before {
+            max-height: 50px;
+        }
+    }
+}
