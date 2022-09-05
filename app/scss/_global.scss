@@ -49,6 +49,7 @@ h3 {
     letter-spacing: 0.05em;
     @extend %reforma-600;
     text-transform: uppercase;
+    text-align: center;
 }
 
 h4 {
@@ -75,8 +76,12 @@ h4 {
 
 .photo-slider__btn--left,
 .photo-slider__btn--right,
+
 .abilities-slider__btn--left,
-.abilities-slider__btn--right {
+.abilities-slider__btn--right,
+
+.abilitiesmb-slider__btn--left,
+.abilitiesmb-slider__btn--right {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -94,7 +99,8 @@ h4 {
     }
 }
 .photo-slider__btn--left,
-.abilities-slider__btn--left {
+.abilities-slider__btn--left,
+.abilitiesmb-slider__btn--left {
     &::before {
         transform: rotate(45deg) translateX(-25px);
         background-image: url("../images/icons/arrow-left.svg");
@@ -102,7 +108,8 @@ h4 {
     left: -120px;
 }
 .photo-slider__btn--right,
-.abilities-slider__btn--right {
+.abilities-slider__btn--right,
+.abilitiesmb-slider__btn--right {
     &::before {
         transform: rotate(45deg) translateX(-20px);
         background-image: url("../images/icons/arrow-right.svg");

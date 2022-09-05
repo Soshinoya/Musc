@@ -13,6 +13,11 @@ const abilitySlider = new SliderBtn({
     btnClassInner: 'abilities-slider__btn-inner',
 });
 
+const abilitySliderMB = new SliderBtn({
+    slideClass: 'abilitiesmb-slider__item',
+    btnClass: 'abilitiesmb-slider__btn',
+    btnClassInner: 'abilitiesmb-slider__btn-inner',
+});
 
 $(function () {
 

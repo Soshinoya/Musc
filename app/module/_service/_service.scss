@@ -8,6 +8,42 @@
         align-items: center;
         justify-content: space-between;
         gap: 20px;
+        display: none;
+        &--active {
+            display: flex;
+        }
+    }
+    &__tabs-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        margin-bottom: 90px;
+    }
+    &__tab {
+        display: inline-block;
+        position: relative;
+        padding: 20px 40px;
+        max-width: 200px;
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            max-width: -webkit-fill-available;
+            max-height: 110px;
+            width: 0;
+            height: 100%;
+            background-color: $accent-color;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: width 0.5s ease;
+        }
+        &--active {
+            &::before {
+                width: 100%;
+            }
+        }
     }
 }
 

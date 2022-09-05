@@ -1,4 +1,5 @@
 .abilities {
+    padding-top: 180px;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -21,9 +22,14 @@
     }
 }
 
+.abilitiesmb-slider {
+    order: -1;
+}
+
 .abilities-slider {
     position: relative;
-    &__item {
+    &__item,
+    .abilitiesmb-slider__item {
         width: 640px;
         display: none;
         margin: 0 auto;
@@ -31,13 +37,15 @@
             display: block;
         }
     }
-    &__item-img {
+    &__item-img,
+    .abilitiesmb-slider__item-img {
         display: block;
         height: 550px;
         width: 640px;
         object-fit: cover;
     }
-    &__item-text {
+    &__item-text,
+    .abilitiesmb-slider__item-text {
         display: block;
         font-size: 18px;
         line-height: 25px;
@@ -48,10 +56,12 @@
         max-width: 425px;
         margin: 50px auto -50px;
     }
-    &__btn--left {
+    &__btn--left,
+    .abilitiesmb-slider__btn--left {
         left: 10px;
     }
-    &__btn--right {
+    &__btn--right,
+    .abilitiesmb-slider__btn--right {
         right: 10px;
     }
 }
