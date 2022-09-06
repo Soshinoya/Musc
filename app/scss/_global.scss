@@ -32,6 +32,8 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     color: $accent-color;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .title {
@@ -41,6 +43,8 @@ h1 {
     letter-spacing: 0.05em;
     text-align: center;
     text-transform: uppercase;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 h3 {

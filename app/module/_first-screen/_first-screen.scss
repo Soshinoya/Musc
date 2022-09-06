@@ -1,6 +1,7 @@
 .first-screen {
     padding-top: 170px;
     position: relative;
+    height: 1000px;
     &::before {
         content: "";
         position: absolute;
@@ -35,6 +36,13 @@
     }
     &__link {
         @extend %link--accent;
+    }
+}
+.service-page {
+    &__first-screen__title {
+        font-size: 64px;
+        line-height: 80px;
+        margin-bottom: 35px;
     }
 }
 

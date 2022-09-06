@@ -22,6 +22,36 @@
     }
 }
 
+.abilities-info {
+    .squares {
+        margin: 50px 0;
+        justify-content: flex-start;
+    }
+    &__title {
+        text-align: left;
+        max-width: 530px;
+    }
+    &__text {
+        max-width: 530px;
+    }
+    &__icons {
+        margin: 50px auto 0;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__icons-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 100px;
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
 .abilitiesmb-slider {
     order: -1;
 }

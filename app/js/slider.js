@@ -5,11 +5,10 @@ class SliderBtn {
 
         this.slidesToView = obj.slidesToView;
 
-        obj?.btnClass ? this.btnClass = obj.btnClass : this.btnClass = '';
-        if (obj?.btnClassInner) {
-            this.btnClassInner = obj.btnClassInner;
-            this.btnInner = document.querySelector(`.${obj.btnClassInner}`);
-        };
+        this.btnClass = obj.btnClass;
+
+        this.btnClassInner = obj.btnClassInner;
+        this.btnInner = document.querySelector(`.${obj.btnClassInner}`);
 
         this.slideArray = document.querySelectorAll(`.${this.slideClass}`);
 
@@ -18,8 +17,8 @@ class SliderBtn {
         this.slidesToView == null ? this.slidesToView = 1 : 0;
         this.counter = this.slidesToView;
         this.counter--;
-
-        this.firstClassChange();
+        
+        this.slideArray.length != 0 ? this.firstClassChange() : 0;
     };
 
     createBtn() {
