@@ -13,11 +13,15 @@ const abilitySlider = new SliderBtn({
     btnClassInner: 'abilities-slider__btn-inner',
 });
 
+const abilitySliderMB = new SliderBtn({
+    slideClass: 'abilitiesmb-slider__item',
+    btnClass: 'abilitiesmb-slider__btn',
+    btnClassInner: 'abilitiesmb-slider__btn-inner',
+});
 
 $(function () {
 
     // Burger Menu
-
     $('.burger-menu').on('click', function () {
         $(this).toggleClass('burger-menu--active');
         $('.menu-anim').toggleClass('menu-anim--active');
