@@ -10,40 +10,22 @@ const uglify         = require('gulp-uglify');
 const rename         = require('gulp-rename');
 const imagemin       = require('gulp-imagemin');
 const htmlmin        = require('gulp-htmlmin');
-const critical       = require('critical');
 const nunjucksRender = require('gulp-nunjucks-render');
 const del            = require('del');
 const { notify }     = require('browser-sync');
 const browserSync    = require('browser-sync').create();
 
-// function html() {
-//   return src('app/**/*.html')
-//     .pipe(htmlmin({ collapseWhitespace: true }))
-//     .pipe(dest('app/'));
-// };
+function html() {
+  return src('app/**/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('app/'));
+};
 
-// function img() {
-//   return src('app/images/**/*.*')
-//     .pipe(imagemin())
-//     .pipe(dest('app/images/'))
-// };
-
-// function critGenerate() {
-//   critical.generate({
-//     inline: true,
-//     base: './',
-//     src: 'app/_index.html',
-//     css: ['app/css/index.min.css'],
-//     width: 1300,
-//     height: 900,
-//     target: {
-//       css: 'css/critical/critical.css',
-//       html: 'app/index.html',
-//       uncritical: 'css/critical/uncritical.css',
-//     },
-//     extract: true,
-//   });
-// };
+function img() {
+  return src('app/images/**/*.*')
+    .pipe(imagemin())
+    .pipe(dest('app/images/'))
+};
 
 function browsersync() {
   browserSync.init({
@@ -78,6 +60,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/aos/dist/aos.js',
     'app/js/slider.js',
     'app/js/tabs.js',
     'app/js/main.js',
@@ -92,7 +75,6 @@ function dist() {
   return src([
     'app/**/*.html',
     'app/css/**/*.css',
-    // 'app/css/critical/**/*.css',
     'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))
@@ -115,12 +97,11 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
-// exports.critGenerate = critGenerate;
-// exports.img = img;
-// exports.html = html;
+exports.img = img;
+exports.html = html;
 exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
 exports.dist = series(cleanDist, dist);
 
 
-exports.default = parallel(nunjucks, styles, scripts, browsersync, watching);
+exports.default = parallel(nunjucks, styles, scripts, html, img, browsersync, watching);

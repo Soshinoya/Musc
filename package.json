@@ -10,7 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.7",
-    "critical": "^4.0.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -25,6 +24,7 @@
     "sass": "^1.43.4"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "gulp-htmlmin": "^5.0.1",
     "nunjucks": "^3.2.3"
   }
