@@ -17,3 +17,11 @@
         }
     }
 }
+
+@media (max-width: 640px) {
+    .gallery {
+        &__item--del {
+            display: none;
+        }
+    }
+}

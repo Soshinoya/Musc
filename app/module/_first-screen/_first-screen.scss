@@ -77,3 +77,44 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .first-screen {
+        height: auto;
+    }
+    .information {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__item {
+            max-width: unset;
+        }
+    }
+};
+
+@media (max-width: 600px) {
+    .first-screen {
+        padding: 60px 0;
+        &__title {
+            font-size: 85px;
+            line-height: 120px;
+        }
+        &__text {
+            margin: 20px auto;
+            font-size: 30px;
+        }
+    }
+};
+
+@media (max-width: 480px) {
+    .first-screen {
+        &__title {
+            font-size: 52px;
+            line-height: 80px;
+            margin-bottom: 15px;
+        }
+        &__text {
+            margin: 30px auto;
+        }
+    }
+}
