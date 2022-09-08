@@ -29,3 +29,12 @@ $(function () {
     });
 
 });
+
+// AOS
+
+// AOS.init();
+
+AOS.init({
+    delay: 200,
+    duration: 1000,
+});
