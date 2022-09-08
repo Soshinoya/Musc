@@ -60,3 +60,9 @@
         right: 0;
     }
 }
+
+@media (max-width: 600px) {
+    .table {
+        display: none;
+    }
+};

@@ -1,9 +1,11 @@
 .achievements {
     padding: 180px 0;
     &__inner {
-        gap: 25px;
         display: flex;
         justify-content: space-between;
+    }
+    &__info {
+        margin-right: 25px;
     }
     .title {
         text-align: left;
@@ -15,9 +17,6 @@
     }
     &__text {
         max-width: 530px;
-    }
-    &__items-inner {
-        display: flex;
     }
     &__items-list {
         &:last-child {
@@ -56,3 +55,49 @@
         text-transform: uppercase;
     }
 }
+
+@media(max-width: 1024px) {
+    .achievements {
+        .title {
+            text-align: center;
+        }
+        .squares {
+            justify-content: center;
+        }
+        &__text {
+            margin: 0 auto;
+            text-align: center;
+        }
+        &__info {
+            margin: 0 auto;
+        }
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__items-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+};
+
+@media (max-width: 600px) {
+    .achievements {
+        .squares {
+            margin: 40px auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .achievements {
+        &__item {
+            width: 250px;
+        }
+    }
+};

@@ -3,6 +3,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        gap: 40px;
     }
     &__list {
         max-width: 530px;
@@ -93,5 +94,59 @@
     &__btn--right,
     .abilitiesmb-slider__btn--right {
         right: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .abilities {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .abilitiesmb-slider {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 720px) {
+    .abilities-slider {
+        &__item
+        ,.abilitiesmb-slider__item {
+            width: 100%;
+            max-height: 600px;
+        }
+        &__item-text,
+        .abilitiesmb-slider__item-text {
+            max-width: 65%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .abilities-slider {
+        &__item,
+        .abilitiesmb-slider__item {
+            max-height: unset;
+        }
+        &__item-text,
+        .abilitiesmb-slider__item-text {
+            max-width: unset;
+        }
+        &__btn--left,
+        &__btn--right,
+        .abilitiesmb-slider__btn--left, 
+        .abilitiesmb-slider__btn--right {
+            bottom: -120px;
+        }
+    }
+    .abilitiesmb-slider {
+        margin-bottom: 110px;
+    }
+    .abilities-info {
+        &__icons-group {
+            justify-content: center;
+            gap: 50px;
+        }
     }
 }

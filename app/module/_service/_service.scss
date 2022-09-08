@@ -98,3 +98,21 @@
         display: flex;
     }
 }
+
+@media (max-width: 1280px) {
+    .service {
+        &__cards {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+};
+
+@media (max-width: 480px) {
+    .service {
+        &__tabs-inner {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+};

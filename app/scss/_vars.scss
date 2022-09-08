@@ -48,3 +48,11 @@ $black-color: #141414;
         }
     }
 }
+
+@media (max-width: 600px) {
+    %link--accent {
+        &::before {
+            width: 100%;
+        }
+    }
+}
