@@ -125,26 +125,6 @@ h4 {
     display: none;
 }
 
-@media (max-width: 1500px) {
-    .photo-slider__btn--left {
-        left: -75px;
-    }
-    .photo-slider__btn--right {
-        right: -60px;
-    }
-}
-
-@media (max-width: 1425px) {
-    .photo-slider__btn--left {
-        left: 50%;
-        top: -100px;
-    }
-    .photo-slider__btn--right {
-        right: 45%;
-        bottom: -100px;
-    }
-}
-
 @media (max-width: 600px) {
     .title {
         font-size: 42px;

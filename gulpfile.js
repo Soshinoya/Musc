@@ -75,7 +75,8 @@ function dist() {
   return src([
     'app/**/*.html',
     'app/css/**/*.css',
-    'app/js/main.min.js'
+    'app/js/main.min.js',
+    'app/images/**/*'
   ], {base: 'app'})
   .pipe(dest('dist'))
 }
@@ -104,4 +105,4 @@ exports.cleanDist = cleanDist;
 exports.dist = series(cleanDist, dist);
 
 
-exports.default = parallel(nunjucks, styles, scripts, html, img, browsersync, watching);
+exports.default = parallel(nunjucks, styles, scripts, img, browsersync, watching);

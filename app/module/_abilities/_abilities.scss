@@ -95,6 +95,15 @@
     .abilitiesmb-slider__btn--right {
         right: 10px;
     }
+    &__btn-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn--left,
+    &__btn--right {
+        position: static;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -106,6 +115,13 @@
     }
     .abilitiesmb-slider {
         margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .abilities-slider__item-text {
+        max-width: 100%;
+        margin: 50px auto 0;
     }
 }
 

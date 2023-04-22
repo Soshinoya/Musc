@@ -7,6 +7,12 @@ const photoSlider = new SliderBtn({
     slidesToView: 3,
 });
 
+if (window.matchMedia('(max-width: 1425px)').matches) {
+    const photoSliderBtnInner = document.querySelector('.photo-slider__btn-inner')
+    const photoSliderBtnInnerContainer = photoSliderBtnInner.closest('.container')
+    photoSliderBtnInnerContainer.appendChild(photoSliderBtnInner)
+}
+
 const abilitySlider = new SliderBtn({
     slideClass: 'abilities-slider__item',
     btnClass: 'abilities-slider__btn',
